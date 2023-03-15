@@ -1,6 +1,6 @@
 import { signOut } from 'next-auth/react';
 import { BiLogOut } from 'react-icons/bi';
-import { BsHouseFill, BsBellFill } from "react-icons/bs";
+import { BsHouseFill, BsBellFill, BsEmojiSunglasses } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
 
 import useCurrentUser from '../../hooks/useCurrentUser';
@@ -38,7 +38,7 @@ const Sidebar = () => {
           <div className="flex flex-col items-end">
             <div className="space-y-2 lg:w-[230px]">
               <SidebarLogo />
-              
+
               <div className="text-xl text-white font-semibold mb-2">
                 Hi {currentUser?.name}!
               </div>
