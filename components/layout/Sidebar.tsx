@@ -38,6 +38,11 @@ const Sidebar = () => {
           <div className="flex flex-col items-end">
             <div className="space-y-2 lg:w-[230px]">
               <SidebarLogo />
+              
+              <div className="text-xl text-white font-semibold mb-2">
+                Hi {currentUser?.name}!
+              </div>
+
               {items.map((item) => (
                 <SidebarItem
                   key={item.href}
