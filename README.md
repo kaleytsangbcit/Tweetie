@@ -32,6 +32,18 @@ npm install react-icons
 
 npm install zustand
 
+npm install -D prisma
+npx prisma init
+npx prisma db push
+npm install @prisma/client
+npm install bcrypt
+npm install -D @types/bcrypt
+npm install next-auth
+npm install @next-auth/prisma-adapter
+npm install swr
+npm install axios
+npm install react-hot-toast
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
