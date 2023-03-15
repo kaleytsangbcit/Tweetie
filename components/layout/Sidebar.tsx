@@ -39,9 +39,12 @@ const Sidebar = () => {
             <div className="space-y-2 lg:w-[230px]">
               <SidebarLogo />
 
-              <div className="text-xl text-white font-semibold mb-2">
-                Hi {currentUser?.name}!
-              </div>
+              {/* Conditional rendering of the message */}
+              {currentUser && (
+                <div className="text-white text-xl mb-2">
+                  Hi {currentUser.name}!
+                </div>
+              )}
 
               {items.map((item) => (
                 <SidebarItem
