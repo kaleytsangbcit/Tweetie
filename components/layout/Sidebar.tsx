@@ -43,7 +43,7 @@ const Sidebar = () => {
 
               {/* Conditional rendering of the message */}
               {currentUser && (
-                <div className="text-rose-300 text-2xl mb-2">
+                <div className="text-rose-300 text-2xl mb-2 font-mono ...">
                   Hi {currentUser.name}!
                 </div>
               )}
