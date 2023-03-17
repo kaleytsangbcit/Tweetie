@@ -1,4 +1,7 @@
+## Project Description
+
 Tweetie is a social media app that connecting you and your friends. 
+
 
 ## Getting Started
 
@@ -19,7 +22,6 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 ```bash
 npm install -D tailwindcss postcss autoprefixer
-```
 
 npx tailwindcss init -p
 
@@ -54,6 +56,8 @@ npm install react-spinners
 npm install date-fns
 
 npm install react-dropzone
+
+```
 
 ## Deploy on Vercel
 
