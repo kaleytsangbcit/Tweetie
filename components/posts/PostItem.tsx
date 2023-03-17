@@ -5,7 +5,7 @@ import { formatDistanceToNowStrict } from 'date-fns';
 
 import useLoginModal from '../../hooks/useLoginModal';
 import useCurrentUser from '../../hooks/useCurrentUser';
-
+import useLike from '../../hooks/useLike';
 
 import Avatar from '../Avatar';
 interface PostItemProps {
@@ -18,7 +18,7 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
   const loginModal = useLoginModal();
 
   const { data: currentUser } = useCurrentUser();
-
+  const { hasLiked, toggleLike } = useLike({ postId: data.id, userId});
 
   const goToUser = useCallback((ev: any) => {
     ev.stopPropagation();
@@ -32,8 +32,14 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
   const onLike = useCallback(async (ev: any) => {
     ev.stopPropagation();
 
-    loginModal.onOpen();
-  }, [loginModal]);
+    if (!currentUser) {
+      return loginModal.onOpen();
+    }
+
+    toggleLike();
+  }, [loginModal, currentUser, toggleLike]);
+
+  const LikeIcon = hasLiked ? AiFillHeart : AiOutlineHeart;
 
   const createdAt = useMemo(() => {
     if (!data?.createdAt) {
@@ -47,9 +53,9 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
     <div 
       onClick={goToPost}
       className="
-        border-b-[0px]
+        border-b-[1px]
         bg-neutral-800
-        border-neutral-500 
+        border-neutral-900 
         p-5 
         cursor-pointer 
         hover:bg-neutral-900 
@@ -116,7 +122,7 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
                 transition 
                 hover:text-rose-300
             ">
-                <AiOutlineHeart size={20} />
+              <LikeIcon color={hasLiked ? 'pink' : ''} size={20} />
               <p>
                 {data.likedIds.length}
               </p>
