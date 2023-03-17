@@ -5,7 +5,6 @@ import { VscAccount } from "react-icons/vsc";
 import { RiLogoutBoxLine } from "react-icons/ri";
 
 
-
 import useCurrentUser from '../../hooks/useCurrentUser';
 
 import SidebarLogo from "./SidebarLogo";

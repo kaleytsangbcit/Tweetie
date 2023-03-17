@@ -36,7 +36,7 @@ interface FormProps {
   
         await axios.post(url, { body });
   
-        toast.success('Tweet created');
+        toast.success('Post created');
         setBody('');
         mutatePosts();
         mutatePost();
