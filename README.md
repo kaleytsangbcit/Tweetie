@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Tweetie is a social media app that connecting you and your friends. 
 
 ## Getting Started
 
@@ -14,11 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Install
 
@@ -33,18 +28,31 @@ npm install react-icons
 npm install zustand
 
 npm install -D prisma
+
 npx prisma init
+
 npx prisma db push
+
 npm install @prisma/client
+
 npm install bcrypt
+
 npm install -D @types/bcrypt
+
 npm install next-auth
+
 npm install @next-auth/prisma-adapter
+
 npm install swr
+
 npm install axios
+
 npm install react-hot-toast
+
 npm install react-spinners
+
 npm install date-fns
+
 npm install react-dropzone
 
 ## Deploy on Vercel
