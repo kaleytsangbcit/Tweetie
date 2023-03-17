@@ -28,11 +28,11 @@ interface ButtonProps {
           font-semibold
           hover:opacity-80
           transition
-          border-2
+          border-1
           ${fullWidth ? 'w-full' : 'w-fit'}
           ${secondary ? 'bg-white' : 'bg-rose-200'}
           ${secondary ? 'text-black' : 'text-gray-900'}
-          ${secondary ? 'border-black' : 'border-rose-200'}
+          ${secondary ? 'border-gray-200' : 'border-rose-300'}
           ${large ? 'text-xl' : 'text-md'}
           ${large ? 'px-5' : 'px-4'}
           ${large ? 'py-3' : 'py-2'}
