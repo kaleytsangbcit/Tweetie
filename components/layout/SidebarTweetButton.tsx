@@ -25,7 +25,7 @@ const SidebarTweetButton = () => {
                     flex
                     items-center
                     justify-center 
-                    bg-sky-500 
+                    bg-orange-500 
                     hover:bg-opacity-80 
                     transition 
                     cursor-pointer
@@ -40,7 +40,7 @@ const SidebarTweetButton = () => {
                     px-4
                     py-2
                     rounded-full
-                    bg-sky-500
+                    bg-orange-300
                     hover:bg-opacity-90 
                     cursor-pointer
             ">
@@ -49,10 +49,10 @@ const SidebarTweetButton = () => {
                     lg:block 
                     text-center
                     font-semibold
-                    text-white 
+                    text-stone-800 
                     text-[20px]
                 ">
-                    Tweet
+                    Login
                 </p>
             </div>
         </div>

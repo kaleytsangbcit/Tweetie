@@ -84,7 +84,7 @@ interface FormProps {
                   transition"
               />
               <div className="mt-4 flex flex-row justify-end">
-                <Button disabled={isLoading || !body} onClick={onSubmit} label="Tweet" />
+                <Button disabled={isLoading || !body} onClick={onSubmit} label="Post" />
               </div>
             </div>
           </div>
