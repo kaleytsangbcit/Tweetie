@@ -2,33 +2,31 @@ import { useRouter } from "next/router";
 import { ClipLoader } from "react-spinners";
 
 import usePost from "../../hooks/usePost";
-
 import Header from "../../components/Header";
 import Form from "../../components/Form";
 import PostItem from "../../components/posts/PostItem";
-// import CommentFeed from "../../components/posts/CommentFeed";
+import CommentFeed from "../../components/posts/CommentFeed";
 
+  const PostView = () => {
+    const router = useRouter();
+    const { postId } = router.query;
 
-const PostView = () => {
-  const router = useRouter();
-  const { postId } = router.query;
+    const { data: fetchedPost, isLoading } = usePost(postId as string);
 
-  const { data: fetchedPost, isLoading } = usePost(postId as string);
-
-  if (isLoading || !fetchedPost) {
-    return (
-      <div className="flex justify-center items-center h-full">
-        <ClipLoader color="pink" size={80} />
-      </div>
-    )
-  }
+    if (isLoading || !fetchedPost) {
+      return (
+        <div className="flex justify-center items-center h-full">
+          <ClipLoader color="pink" size={80} />
+        </div>
+      )
+    }
 
   return ( 
     <>
-      <Header showBackArrow label="Tweet" />
+      <Header showBackArrow label="Posts" />
       <PostItem data={fetchedPost} />
       <Form postId={postId as string} isComment placeholder="Reply to the post ..." />
-      {/* <CommentFeed comments={fetchedPost?.comments} /> */}
+      <CommentFeed comments={fetchedPost?.comments} />
     </>
    );
 }
