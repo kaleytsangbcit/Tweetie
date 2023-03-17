@@ -48,7 +48,7 @@ interface FormProps {
     }, [body, mutatePosts, isComment, postId, mutatePost]);
   
     return (
-      <div className="border-b-[1px] border-neutral-800 px-5 py-2">
+      <div className="border-b-[1px] bg-neutral-500 border-neutral-800 px-5 py-2">
         {currentUser ? (
           <div className="flex flex-row gap-4">
             <div>
@@ -69,7 +69,8 @@ interface FormProps {
                   ring-0 
                   outline-none 
                   text-[20px] 
-                  placeholder-neutral-500 
+                  placeholder-white
+                  bg-neutral-500
                   text-white
                 "
                 placeholder={placeholder}>
